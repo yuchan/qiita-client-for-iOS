@@ -22,6 +22,8 @@
 		703F43C3184226D900521A3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703F43A2184226D900521A3B /* UIKit.framework */; };
 		703F43CB184226D900521A3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703F43C9184226D900521A3B /* InfoPlist.strings */; };
 		703F43CD184226D900521A3B /* qiita_client_for_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 703F43CC184226D900521A3B /* qiita_client_for_iOSTests.m */; };
+		70617D6F184254850075DD23 /* QiitaClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 70617D6E184254850075DD23 /* QiitaClient.m */; };
+		B1285009D5EB4B6BB262F70F /* libPods-qiita-client-for-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D05A8772D4C447748182B0CD /* libPods-qiita-client-for-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E0506F76D2948F38E011379 /* Pods-qiita-client-for-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita-client-for-iOS.xcconfig"; path = "Pods/Pods-qiita-client-for-iOS.xcconfig"; sourceTree = "<group>"; };
 		703F439B184226D900521A3B /* qiita-client-for-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qiita-client-for-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		703F439E184226D900521A3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		703F43A0184226D900521A3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +58,9 @@
 		703F43C8184226D900521A3B /* qiita-client-for-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "qiita-client-for-iOSTests-Info.plist"; sourceTree = "<group>"; };
 		703F43CA184226D900521A3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		703F43CC184226D900521A3B /* qiita_client_for_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qiita_client_for_iOSTests.m; sourceTree = "<group>"; };
+		70617D6D184254850075DD23 /* QiitaClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiitaClient.h; sourceTree = "<group>"; };
+		70617D6E184254850075DD23 /* QiitaClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiitaClient.m; sourceTree = "<group>"; };
+		D05A8772D4C447748182B0CD /* libPods-qiita-client-for-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-qiita-client-for-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				703F43A1184226D900521A3B /* CoreGraphics.framework in Frameworks */,
 				703F43A3184226D900521A3B /* UIKit.framework in Frameworks */,
 				703F439F184226D900521A3B /* Foundation.framework in Frameworks */,
+				B1285009D5EB4B6BB262F70F /* libPods-qiita-client-for-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +91,12 @@
 		703F4392184226D900521A3B = {
 			isa = PBXGroup;
 			children = (
+				70617D6C184254850075DD23 /* Classes */,
 				703F43A4184226D900521A3B /* qiita-client-for-iOS */,
 				703F43C6184226D900521A3B /* qiita-client-for-iOSTests */,
 				703F439D184226D900521A3B /* Frameworks */,
 				703F439C184226D900521A3B /* Products */,
+				6E0506F76D2948F38E011379 /* Pods-qiita-client-for-iOS.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +116,7 @@
 				703F43A0184226D900521A3B /* CoreGraphics.framework */,
 				703F43A2184226D900521A3B /* UIKit.framework */,
 				703F43C0184226D900521A3B /* XCTest.framework */,
+				D05A8772D4C447748182B0CD /* libPods-qiita-client-for-iOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +165,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		70617D6C184254850075DD23 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				70617D6D184254850075DD23 /* QiitaClient.h */,
+				70617D6E184254850075DD23 /* QiitaClient.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 703F43D0184226D900521A3B /* Build configuration list for PBXNativeTarget "qiita-client-for-iOS" */;
 			buildPhases = (
+				CED94329DC47422589033059 /* Check Pods Manifest.lock */,
 				703F4397184226D900521A3B /* Sources */,
 				703F4398184226D900521A3B /* Frameworks */,
 				703F4399184226D900521A3B /* Resources */,
+				CF0406A7CABF492F93F452F7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +269,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CED94329DC47422589033059 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF0406A7CABF492F93F452F7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-qiita-client-for-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		703F4397184226D900521A3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,6 +310,7 @@
 				703F43B8184226D900521A3B /* ViewController.m in Sources */,
 				703F43AF184226D900521A3B /* AppDelegate.m in Sources */,
 				703F43AB184226D900521A3B /* main.m in Sources */,
+				70617D6F184254850075DD23 /* QiitaClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +444,7 @@
 		};
 		703F43D1184226D900521A3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0506F76D2948F38E011379 /* Pods-qiita-client-for-iOS.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -402,6 +458,7 @@
 		};
 		703F43D2184226D900521A3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0506F76D2948F38E011379 /* Pods-qiita-client-for-iOS.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -474,6 +531,7 @@
 				703F43D2184226D900521A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		703F43D3184226D900521A3B /* Build configuration list for PBXNativeTarget "qiita-client-for-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +540,7 @@
 				703F43D5184226D900521A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
